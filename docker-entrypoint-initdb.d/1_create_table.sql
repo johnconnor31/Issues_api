@@ -7,3 +7,14 @@ CREATE TABLE issue_db.issues (
   updated_by VARCHAR(100),
   updated_at TIMESTAMP NOT NULL DEFAULT now()
 );
+
+CREATE TABLE issue_db.revisions (
+  id INT(6) UNSIGNED AUTO_INCREMENT,
+  changes JSON,
+  updated_at TIMESTAMP NOT NULL DEFAULT now()
+);
+
+CREATE TABLE issue_db.users (
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(200) NOT NULL
+)
